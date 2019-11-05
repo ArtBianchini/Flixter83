@@ -1,7 +1,6 @@
 class Instructor::CoursesController < ApplicationController
 	before_action :authenticate_user!
 
-
 	def new 
 		@course = Course.new
 	end 
@@ -12,21 +11,15 @@ class Instructor::CoursesController < ApplicationController
     redirect_to instructor_course_path(@course)
   end
 
-  private
-
-  def course_params
-    params.require(:course).permit(:title, :description, :cost)
-  end
-
   def show
   	@course = Course.find(params[:id])
 end
 
 
-	private
+  private
 
 
-	 def course_params
+  def course_params
     params.require(:course).permit(:title, :description, :cost)
   end
-end
+end 
