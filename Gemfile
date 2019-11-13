@@ -33,6 +33,8 @@ gem 'carrierwave', '~> 2.0'
 
 gem 'figaro'
 
+gem 'fog-aws'
+
 group :doc do 
   gem 'sdoc', require: false
   # Use Autoprefixer with Bootstrap to add browser
