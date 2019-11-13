@@ -37,6 +37,8 @@ gem 'fog-aws'
 
 gem "mini_magick"
 
+gem 'carrierwave-aws'
+
 group :doc do 
   gem 'sdoc', require: false
   # Use Autoprefixer with Bootstrap to add browser
