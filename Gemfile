@@ -31,6 +31,8 @@ gem 'simple_form'
 
 gem 'carrierwave', '~> 2.0'
 
+gem 'figaro'
+
 group :doc do 
   gem 'sdoc', require: false
   # Use Autoprefixer with Bootstrap to add browser

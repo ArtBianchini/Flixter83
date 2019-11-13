@@ -19,10 +19,6 @@ class Instructor::CoursesController < ApplicationController
   def show
 end
 
-  def course.image
-end 
-
-
   private
 
 
