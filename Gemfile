@@ -35,6 +35,8 @@ gem 'figaro'
 
 gem 'fog-aws'
 
+gem "mini_magick"
+
 group :doc do 
   gem 'sdoc', require: false
   # Use Autoprefixer with Bootstrap to add browser
