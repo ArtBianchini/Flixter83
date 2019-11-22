@@ -47,6 +47,8 @@ gem 'jquery-ui-rails'
 
 gem 'ranked-model'
 
+gem 'font-awesome-rails'
+
 group :doc do 
   gem 'sdoc', require: false
   # Use Autoprefixer with Bootstrap to add browser
