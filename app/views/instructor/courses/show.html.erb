@@ -12,6 +12,7 @@
     }); 
   }); 
 </script>
+
 <script>
   $(function() {
     $('.sections').sortable({
@@ -42,17 +43,19 @@
 
 
   <ul class="sections">
-  	<% current_course.sections.rank(:row_order).each do |section| %>
-  	  <li data-update-url="<%= instructor_section_path section %>" class="section-li"> 
+  	<% current_course.sections.rank(:row_order_position).each do |section| %>
+  	  <li data-update-url="<%= instructor_section_path (section) %>" class="section-li"> 
         <div class="header float-left">
           <span class="fa fa-ellipsis-v"></span> 
   	  	<%= section.title %>
       </div>
   	  	<%= link_to 'New Lesson', new_instructor_course_section_path(section), class: 'float-right btn btn-primary btn-sm' %>
+
         <br class="clr" />
         <br class="clr" />
+
   	  	<ul class= "lessons">
-  	  	   <% section.lessons.rank(:row_order).each do |lesson| %>
+  	  	   <% section.lessons.rank(:row_order_positionnnnn).each do |lesson| %>
   	  	     <li data-update-url="<%= instructor_lesson_path(lesson) %>">
             <div class="row">
                 <div class="col-1">
@@ -61,7 +64,6 @@
               </div>
               <div class="col-11 text-center">
               <p>
-              <<p>
             <b><%= lesson.title %></b>
           </p>
           <p>
@@ -69,12 +71,12 @@
           </p>
         </div>
       </div>
+      <br class="clr" />
     </li>
+    <% end %>
+  </ul>
+   <br class="clr" />
+  </li>
   <% end %>
-</ul>
-  <br class="clr" />
-    </li>
-  <% end %>
-</ul>
-
-</div>  
+ </ul>
+</div>
