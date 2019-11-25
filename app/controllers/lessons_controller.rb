@@ -13,6 +13,6 @@ class LessonsController < ApplicationController
    end 
 	helper_method :current_lesson
 	def current_user.enrolled_in
-		@current_user.enrolled_in ||= Current_user.enrolled_in.find(params[:id])
+		current_user.enrolled_in ||= Current_user.enrolled_in.find(params[:id])
 	end
 end
