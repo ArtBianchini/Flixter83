@@ -9,6 +9,7 @@ class LessonsController < ApplicationController
 		def require_authorized_for_current_lesson
 		if current_user.enrolled_in != current_user
 			redirect_to static_pages_index, alert: 'Error Message Here'
+		end 
 	end 
 
 	helper_method :current_lesson
