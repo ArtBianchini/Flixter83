@@ -19,6 +19,7 @@ class EnrollmentsController < ApplicationController
       currency: 'usd'
     )
   end 
+end 
    current_user.enrollments.create(couse: current_course) 
   redirect_to course_path(current_course)
   rescue Stripe::CardError => e
